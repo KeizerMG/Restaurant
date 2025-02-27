@@ -33,7 +33,7 @@ public class Plat {
         this.imageURL = imageURL;
     }
 
-    // Getters and setters
+  
     public String getNom() {
         return nom;
     }
