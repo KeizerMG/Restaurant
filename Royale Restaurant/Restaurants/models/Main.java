@@ -12,7 +12,7 @@ public class Main {
         while (true) {
             afficherMenu();
             int choix = getIntInput();
-            scanner.nextLine(); // Clear buffer after getting menu choice
+            scanner.nextLine(); 
             
             switch (choix) {
                 case 1:
@@ -70,7 +70,7 @@ public class Main {
         
         System.out.print("ID du restaurant : ");
         int id = getIntInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         System.out.print("Nom du restaurant : ");
         String nomRestaurant = scanner.nextLine();
@@ -80,7 +80,7 @@ public class Main {
         
         System.out.print("ID du menu : ");
         int menuId = getIntInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         System.out.print("Nom du menu : ");
         String nomMenu = scanner.nextLine();
@@ -101,7 +101,7 @@ public class Main {
         
         System.out.print("ID du restaurant : ");
         int restaurantId = getIntInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         Restaurant restaurant = findRestaurantById(restaurantId);
         if (restaurant == null) {
@@ -111,7 +111,7 @@ public class Main {
         
         System.out.print("ID de l'employé : ");
         int id = getIntInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         System.out.print("Nom de l'employé : ");
         String nom = scanner.nextLine();
@@ -126,7 +126,7 @@ public class Main {
         
         System.out.print("Salaire de l'employé : ");
         double salaire = getDoubleInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         Employe employe = new Employe(id, nom, prenom, role, dateEmbauche, salaire);
         
@@ -140,7 +140,7 @@ public class Main {
         restaurant.ajouterEmploye(employe);
         System.out.println("Employé ajouté avec succès au restaurant " + restaurant.getNomRestaurant() + ".");
         
-        // Vérifier la liste des employés après ajout
+      
         System.out.println("Liste des employés après ajout:");
         restaurant.afficherEmployes();
     }
@@ -150,7 +150,7 @@ public class Main {
         
         System.out.print("ID du restaurant : ");
         int restaurantId = getIntInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         Restaurant restaurant = findRestaurantById(restaurantId);
         if (restaurant == null) {
@@ -166,11 +166,11 @@ public class Main {
         
         System.out.print("Prix du plat : ");
         double prix = getDoubleInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         System.out.print("Calories du plat : ");
         int calories = getIntInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         System.out.print("Catégorie du plat : ");
         String categorie = scanner.nextLine();
@@ -182,7 +182,7 @@ public class Main {
         
         System.out.print("Disponibilité (true/false) : ");
         boolean disponibilite = getBooleanInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         System.out.print("Ingrédients : ");
         String ingredients = scanner.nextLine();
@@ -192,11 +192,11 @@ public class Main {
         
         System.out.print("Temps de préparation : ");
         int tempsPreparation = getIntInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         System.out.print("Prix spécial : ");
         double prixSpecial = getDoubleInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine();
         
         System.out.print("URL de l'image : ");
         String imageURL = scanner.nextLine();
@@ -211,7 +211,7 @@ public class Main {
         
         System.out.print("ID du restaurant : ");
         int restaurantId = getIntInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         Restaurant restaurant = findRestaurantById(restaurantId);
         if (restaurant == null) {
@@ -221,7 +221,7 @@ public class Main {
         
         System.out.print("ID de l'employé à supprimer : ");
         int employeId = getIntInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine();
         
         Employe employeToRemove = null;
         for (Employe employe : restaurant.getEmployes()) {
@@ -245,7 +245,7 @@ public class Main {
         
         System.out.print("ID du restaurant : ");
         int restaurantId = getIntInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         Restaurant restaurant = findRestaurantById(restaurantId);
         if (restaurant == null) {
@@ -261,7 +261,7 @@ public class Main {
         
         System.out.print("ID du restaurant : ");
         int restaurantId = getIntInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         Restaurant restaurant = findRestaurantById(restaurantId);
         if (restaurant == null) {
@@ -271,7 +271,7 @@ public class Main {
         
         System.out.print("Numéro de la commande : ");
         int numeroCommande = getIntInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         Commande commande = new Commande(numeroCommande);
         
@@ -301,7 +301,7 @@ public class Main {
         
         System.out.print("ID du restaurant : ");
         int restaurantId = getIntInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         Restaurant restaurant = findRestaurantById(restaurantId);
         if (restaurant == null) {
@@ -318,7 +318,7 @@ public class Main {
         
         System.out.print("ID du restaurant : ");
         int restaurantId = getIntInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         Restaurant restaurant = findRestaurantById(restaurantId);
         if (restaurant == null) {
@@ -342,7 +342,7 @@ public class Main {
         
         System.out.print("ID du restaurant : ");
         int restaurantId = getIntInput();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         Restaurant restaurant = findRestaurantById(restaurantId);
         if (restaurant == null) {
@@ -384,7 +384,7 @@ public class Main {
                 return value;
             } catch (InputMismatchException e) {
                 System.out.println("Erreur : Veuillez entrer un nombre valide.");
-                scanner.nextLine(); // clear the invalid input
+                scanner.nextLine(); 
             }
         }
     }
@@ -396,7 +396,7 @@ public class Main {
                 return value;
             } catch (InputMismatchException e) {
                 System.out.println("Erreur : Veuillez entrer un nombre valide.");
-                scanner.nextLine(); // clear the invalid input
+                scanner.nextLine();
             }
         }
     }
@@ -408,7 +408,7 @@ public class Main {
                 return value;
             } catch (InputMismatchException e) {
                 System.out.println("Erreur : Veuillez entrer true ou false.");
-                scanner.nextLine(); // clear the invalid input
+                scanner.nextLine(); 
             }
         }
     }
