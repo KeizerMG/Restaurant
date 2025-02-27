@@ -123,15 +123,13 @@ public class Restaurant {
         try (BufferedReader reader = new BufferedReader(new FileReader(fichier))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                // Assuming the toString format is used for saving
-                // Parse the line to create Commande objects
-                // Example: Commande #123 : Total : 50.0 euros
+            
                 String[] parts = line.split(":");
                 if (parts.length > 1) {
                     String commandeDetails = parts[0].trim();
                     String totalDetails = parts[1].trim();
 
-                    // Extract the command number
+                   
                     String[] commandeParts = commandeDetails.split("#");
                     int numeroCommande = Integer.parseInt(commandeParts[1].trim());
 
